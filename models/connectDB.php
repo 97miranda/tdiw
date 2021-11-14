@@ -1,18 +1,14 @@
 <?php
 
-$databaseName = 'practica';
-$databaseUser = 'root'; 
-$databasePassword = '';
-$databaseHost = '8.8.8.9';
-
- class Conectar{
+ class connect{
 
     public static function conexion(){
 
         try{
 
-            $conexion = new PDO('mysql:host=localhost; dbname=practica', 'root','');
+            $conexion = new PDO("mysql:host=localhost;dbname=practica", 'root','');
 
+            echo "conexión realizada";
             $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             $conexion->exec("SET CHARACTER SET UTF8");
@@ -22,5 +18,8 @@ $databaseHost = '8.8.8.9';
 
             echo "Línea del error" . $e->getLine();
         }
+        return $conexion;
     }
- }
+
+}
+ ?>

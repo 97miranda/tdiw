@@ -8,14 +8,18 @@
 
         public function __construct(){
 
-            require_once("connectDB.php");
+            require_once("models/connectDB.php");
+
+            $this->db=connect::conexion();
+
+            $this->products=array();
         }
 
         public function get_products(){
 
-                $consulta=$this->db->query("SELECT * FROM PRODUCTOS");
+                $consult=$this->db->query("SELECT * FROM productos");
 
-                while($filas=$consulta->fetch(PDO::FETCH_ASSOC)){
+                while($filas=$consult->fetch(PDO::FETCH_ASSOC)){
                     $this->products[]=$filas;
                 }
 
@@ -24,4 +28,4 @@
         }
     }
 
-    
+?>    

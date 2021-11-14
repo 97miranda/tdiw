@@ -9,6 +9,10 @@
         public function __construct(){
 
             require_once("connectDB.php");
+
+            $this->db=connect::conexion();
+
+            $this->categories=array();
         }
 
         public function get_categories(){
@@ -23,5 +27,5 @@
     
         }
     }
-
+?>
     
