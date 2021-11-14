@@ -1,18 +1,20 @@
+
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Prueba Indice </title>
+	</head>
+
+	<body>
+
 <?php
+ 
+ 	require_once("controllers/products_controller.php");
+	  
 
+?>
+	</body>
 
-$accio = $_GET['action'];
-
-switch ($action)
-{
-	case 'lista-categorias':
-		include __DIR__.'/category_list_resource.php';
-		break;
-	
-	case 'products':
-		include __DIR__.'/product_resource.php';
-		break;
-	default:
-		include __DIR__.'/home_resource.php';
-		break;
-}
+</html>
