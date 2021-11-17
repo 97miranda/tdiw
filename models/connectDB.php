@@ -6,7 +6,7 @@
 
         try{
 
-            $conexion = new PDO("mysql:host=localhost;dbname=practica", 'root','');
+            $conexion = new PDO("mysql:host=127.0.0.1;dbname=tdiw;port=3305", 'root','');
 
             echo "conexión realizada";
             $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
