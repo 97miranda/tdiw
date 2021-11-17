@@ -1,31 +1,16 @@
+
 <?php
 
-    class Categories_model{
+       function get_categories() {
 
-        private $db;
+            $conexion = connect::conexion();
+            $sql = "SELECT * FROM categorias";
 
-        private $categories;
+           $stmt = $conexion->query($sql, PDO::FETCH_ASSOC);
+           return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        public function __construct(){
 
-            require_once("connectDB.php");
-
-            $this->db=connect::conexion();
-
-            $this->categories=array();
-        }
-
-        public function get_categories(){
-
-                $consulta=$this->db->query("SELECT * FROM CATEGORIAS");
-
-                while($filas=$consulta->fetch(PDO::FETCH_ASSOC)){
-                    $this->categories[]=$filas;
-                }
-
-                return $this->categories;
     
         }
-    }
-?>
+
     

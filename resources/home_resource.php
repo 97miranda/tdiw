@@ -1,18 +1,15 @@
-
-<html lang="ca">
+<!DOCTYPE html>
+<html>
 <head>
-	<title>Home</title>
+    <title>Titulo web</title>
 </head>
-
 <body>
-<header>
-	<?php require __DIR__.'/controller/header_controller.php'; ?>
-</header>
-
-<div class="container">
-	<?php require __DIR__.'/controller/home_controller.php'; ?>
-</div>
-
+    <header>
+        <?php include __DIR__ . "/../views/header_view.php"; ?>
+    </header>
+    <div class="container">
+        <?php require __DIR__ . '/../controllers/category_list_controller.php';?>
+    </div>
 </body>
 
 </html>

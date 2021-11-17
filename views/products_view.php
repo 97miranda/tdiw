@@ -8,14 +8,7 @@
 
 <table>
 <tr><td> Nombre del articulo </td>
-<?php
 
-foreach($matrizProducts as $registro){
-
-    echo "<tr><td" . $registro["nombre"] . "</td></tr>";
-}
-
-?>
 
 </table>
 </body>

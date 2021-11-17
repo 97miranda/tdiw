@@ -1,20 +1,15 @@
-
-
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title> Prueba Indice </title>
-	</head>
-
-	<body>
-
 <?php
- 
- 	require_once("controllers/products_controller.php");
-	  
+require_once __DIR__ . '/config.php';
 
-?>
-	</body>
+session_start();
 
-</html>
+$request = isset($_GET['action']) ? $_GET['action'] : null;
+
+switch ($request) {
+    case 'product_list' :
+        require __DIR__ . '/resources/product_list_resource.php';
+        break;
+    default:
+        require __DIR__ . '/resources/home_resource.php';
+        break;
+}

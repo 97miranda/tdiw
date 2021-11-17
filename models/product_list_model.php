@@ -1,6 +1,6 @@
 <?php
 
-    class Products_model{
+    class product_list_model{
 
         private $db;
 
